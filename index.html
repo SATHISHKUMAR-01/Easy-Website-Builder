@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag-and-Drop Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .palette {
+      width: 100px;
+      height: 100%;
+      background-color: #f0f0f0;
+      border-right: 2px solid #ccc;
+      padding: 10px;
+      float: left;
+    }
+
+    .canvas {
+      width: calc(100% - 120px);
+      height: 500px;
+      margin-left: 120px;
+      border: 2px dashed #aaa;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .draggable {
+      width: 100px;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      border: none;
+      cursor: grab;
+    }
+
+    .dropped {
+      position: absolute;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="palette">
+    <button class="draggable" draggable="true" id="button1">Drag Me</button>
+  </div>
+
+  <div class="canvas" id="canvas">
+    <!-- Buttons dropped here will appear -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
